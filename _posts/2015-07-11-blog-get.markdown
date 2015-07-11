@@ -5,10 +5,9 @@ date:   2015-07-11 02:13:51
 categories: idiotic github homeautomation
 ---
 
-I have a blog <strike>now</strike>. To prevent this from becoming a singular
-meta-post, I am just going to say that I let
-[Mark](http://bitbyt3r.net) do all the work and then I copied it. Yay,
-<strike>mooching</strike> teamwork!
+I have a blog <strike>now</strike>. To prevent this from becoming a
+singular meta-post, I am just going to say that I let
+[Mark](http://bitbyt3r.net) do all the work and then I copied it. Yay, <strike>mooching</strike> teamwork!
 
 Okay, now for the content.. Um... So I am writing a thing called
 [idiotic](https://github.com/umbc-hackafe/idiotic). It's a home
