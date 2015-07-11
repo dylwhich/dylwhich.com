@@ -1,0 +1,80 @@
+---
+layout: post
+title:  "Blog Get!"
+date:   2015-07-11 02:13:51
+categories: idiotic github homeautomation
+---
+
+I have a blog <strike>now</strike>. To prevent this from becoming a singular
+meta-post, I am just going to say that I let
+[Mark](http://bitbyt3r.net) do all the work and then I copied it. Yay,
+<strike>mooching</strike> teamwork!
+
+Okay, now for the content.. Um... So I am writing a thing called
+[idiotic](https://github.com/umbc-hackafe/idiotic). It's a home
+automation framework intended to be a replacement for
+[OpenHAB](https://github.com/openhab/openhab), but without all the
+things that drove me to insanity while trying to configure it.
+
+&lt;rant&gt;One thing I was trying to do was to have my lights turn on
+at sunset and then off again at sunrise. Pretty simple, right? Nope!
+Because, for some reason, OpenHAB apparently has *no* features for
+converting a perfectly good ISO 8601 formatted date string into a
+DateTimeItem. Or was that a DateTime? *I have no idea*, but I don't
+want to do it myself.
+
+If you're familiar with OpenHAB you might be thinking that I should
+have just used the built-in `astro` binding that does this
+automagically and not bother with the whole doing it myself
+thing. Which is pretty much true, but it just didn't want to work for
+me, and this should have been a super easy problem to solve if I could
+just write some simple Java to do it in a normal sane way. But OpenHAB
+doesn't support doing things the normal sane way, and I really don't
+want to compile a jar every time I want to change a script (and nobody
+should ever have to write in the unholy bastardization of Java that is the
+[world's most enterprisey scripting language](https://eclipse.org/xtend/)).
+&lt;/rant&gt; &lt;but-not-really/&gt;
+
+So I decided I would write my own. This time in Python, because Python
+is objectively better than everything else ever. And I decided it
+should be like this:
+
+* It should be really easy to develop for. Adding new behaviors to
+  items should be as simple as possible even for people who aren't
+  necessarily the best programmers.
+* It should be capable of running on multiple instances and syncing
+  together, because OpenHAB just is not designed to work on anything
+  other than a signle centralized server that is the only thing
+  connected to stuff. This could not be farther from reality in mine
+  (and probably other people's) cases. idiotic doesn't quite support
+  this yet but it's going to happen soon.
+
+* It shouldn't make too many assumptions. OpenHAB is guilty of this
+  and when it gets them wrong, it can be very difficult to convince it
+  otherwise. idiotic is already super configurable and won't do random
+  things you haven't told it to for no reason because its design is
+  based on the assumption that nobody would do it that way.
+
+* It should be easy to configure for people who aren't programmers,
+  but it shouldn't be *crippled* for those who are. The configuration is
+  just *Python*, specifically so you can avoid the problem I had all too
+  often in OpenHAB which forced me to just copy and paste instead of
+  using a simple programmatic construct (like, say, a *loop*, which is
+  apparently too complex for OpenHAB).
+
+* Things shouldn't be randomly coupled together for no reason. In
+  OpenHAB, the type and appearance of graphs you can generate *depends
+  entirely on which database engine you are using*. That doesn't even
+  make any sentence.
+
+So, that's my basic philosophy/inspiration for idiotic. But mostly
+it's a rant about how much I hate OpenHAB. **Disclaimer:** OpenHAB is
+a fine piece of software made by some lovely people. I just hate
+it. Mostly because I spent like 5 days trying to get that stupid
+string to turn into a date and had to give up because it apparently
+just wasn't possible.
+
+**Next time**: I try not to complain about OpenHAB and probably fail
+miserably, but mostly I will try to talk about the current state of
+idiotic and the home automation sstems that it's currently
+controlling. Thank both of you for reading!
