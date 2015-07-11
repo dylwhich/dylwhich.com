@@ -64,7 +64,7 @@ should be like this:
 * Things shouldn't be randomly coupled together for no reason. In
   OpenHAB, the type and appearance of graphs you can generate *depends
   entirely on which database engine you are using*. That doesn't even
-  make any sentence.
+  make any sense.
 
 So, that's my basic philosophy/inspiration for idiotic. But mostly
 it's a rant about how much I hate OpenHAB. **Disclaimer:** OpenHAB is
