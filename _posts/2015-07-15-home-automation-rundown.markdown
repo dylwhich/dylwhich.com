@@ -87,9 +87,9 @@ it's in beforehand.
 
 For movie-watching, there's a 'scene' that can be activated in order
 to close the garage door, lower the projector screen, and turn the
-lights out. The eventual goal is to hook this up to [CEC] and
-<strike>XBMC</strike> [Kodi] so that it automatically does this when the
-projector turns on, and undo it all when it turns off.
+lights out. The eventual goal is to hook this up to [CEC]
+and <strike>XBMC</strike> [Kodi] so that it automatically does this
+when the projector turns on, and undo it all when it turns off.
 
 There's also a similar scene set up in the living room, which just
 disables the lights.
@@ -98,8 +98,8 @@ disables the lights.
 
 The lights are controlled mostly with [X10 WS13A switches][switches]
 and various old appliance and lamp modules. The controller is the
-now-discontinued TW523 module and [an arduino][x10-arduino] and a
-[raspberry pi][x10-arduino-controller]. Currently idiotic controls
+now-discontinued TW523 module and [an arduino][x10-arduino-controller] and a
+[raspberry pi][x10-arduino]. Currently idiotic controls
 this over the HTTP API, but it will be absorbed by idiotic.
 
 # The State of idiotic #
@@ -118,11 +118,11 @@ most of the major development will be done as modules. It's getting
 there!!! Ahhhhhhhhh
 
 [idiotic]: https://github.com/umbc-hackafe/idiotic
-[openhalper]: https://github.com/umbc-hackafe/openhalper
+[openhalper]: https://github.com/dylwhich/openhalper
 [openhab]: https://github.com/openhab/openhab
 [modlets]: http://shop.thinkecoinc.com/products/wifi-smartac-kit#.VaalTnqUzGc
-[zigbee]: https://www.zigbee.org
-[cec]: https://en.wikipedia.org/wiki/CEC
+[zigbee]: http://www.zigbee.org
+[cec]: https://en.wikipedia.org/wiki/Consumer_Electronics_Control
 [kodi]: https://kodi.tv
 [switches]: https://amazon.com/gp/aw/d/B001L7AN4Y
 [x10-arduino-controller]: https://github.com/umbc-hackafe/x10-arduino-controller
